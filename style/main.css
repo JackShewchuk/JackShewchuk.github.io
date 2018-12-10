@@ -1,4 +1,6 @@
 body{
+  overflow-y: scroll;
+overflow-x: hidden;
   margin:0;
   padding:0;
   	font-family: Verdana,Geneva,sans-serif; 
@@ -6,9 +8,23 @@ body{
   -moz-text-decoration-color: none;
 }
 
+#fullpage{
+ scroll-snap-type: y mandatory;
 
+
+}
+
+
+.section {
+    scroll-snap-align: start;
+}
+
+h3{
+  overflow:hidden;
+}
 .welcome-page{
-
+  height:100%;
+  width:100%;
   background-repeat: no-repeat;
 }
 
@@ -17,39 +33,231 @@ body{
   background-repeat: no-repeat;
   background-size:cover;
     background-attachment: fixed;
+    
   height:100vh;
-  width:100vw;
-
+  width:100%;
   position: absolute;
+
   z-index: 100;
 }
 
-.about{
 
-  margin: 0;
+
+.display{
+  position: absolute;
+}
+.website-video{
+  position: absolute;
+  top:100vh;
+  left:0;
+  width:49.6vw !important;
+  height:100vh !important;
+  z-index: 0;
+  padding:0;
+  margin:0;
+  background-color: black
+  
+}
+.slide2{
+  width:100vw;
+  height:100vh;
+  display: none;
+  top:100vh;
+  z-index: 2;
+  background-color:whitesmoke;
+}
+
+.fas{
+  height:50px;
+  width:50px;
+}
+.banner{
+  font-size:1.9rem;
+  padding-left:2vw;
+  color: rgb(49, 49, 49);
+}
+
+.banner-content{
+  font-size: 1.1rem;
+  padding-left:2vw;
+  color: rgb(202, 201, 201);
+}
+
+.button-holder{
+  
+  padding-left: 2vw;
+}
+
+.button {
+  background-color: #7CEBDD; /* Green */
+  border: none;
+  color: rgb(75, 74, 74);
+  font-family: futura-pt-bold,Geneva,sans-serif;
+  padding: 15px 32px;
+  text-emphasis: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor:pointer;
+}
+
+.website-container{
+  height:100%;
+  width:100%;
+  display: grid;
+  grid-template-rows: 20% auto 40%;
+    place-items: center center;
+}
+
+.video-video-content{
+  height:100%;
+  width:100%;
+  display: grid;
+  grid-template-columns: 45% auto 45%;
+    place-items: start start;
+}
+
+.cambodia-holder{
+  padding-left:8vh;
+  line-height:1.7rem;
+}
+
+.cambodia-holder h3{
+  color:darkgrey;
+}
+
+.service-holder{
+  padding-left:3vh;
+  line-height:1.7rem;
+}
+
+.service-holder h3{
+  color:darkgrey;
+}
+
+.website-spacer{
+  width:100vw;
+  height: 100%;
+
+}
+.logo-button-holder{
+  padding-left: 2vw;
+}
+.video-button-holder{
+  padding-left: 2vw;
+}
+.view{
+  width:100%;
+  height:100%;
+  display:grid;
+  grid-template-columns: 33% auto 33% auto 33%;
+  place-items: center center;
+}
+.kappa{
+  height:100%;
+  width:100%;
+  background-repeat: no-repeat;
+  background-size:cover !important;
+  
+  background-position: center center;
+  background: url("../img/kappa.PNG");
+}
+
+.motley{
+  height:100%;
+  width:100%;
+  background-repeat: no-repeat;
+  background-size:cover !important;
+  
+  background-position: center center;
+  background: url("../img/motley.png");
+}
+
+.nest{
+  height:100%;
+  width:100%;
+  background-repeat: no-repeat;
+  background-size:cover !important;
+  
+  background-position: center center;
+  background: url("../img/nest.png");
+}
+
+.h2{
+  font-family: futura-pt-bold,Geneva,sans-serif;  
+}
+
+.logo-banner{
+  color: rgb(69, 77, 104);
+}
+
+.video-video{
+  position: absolute;
+  top:200vh;
+  left:49.6vw;
+  width:49.6vw !important;
+  height:100vh !important;
+  z-index: 0;
+  padding:0;
+  margin:0;
+  background-color: black;  
+  
+overflow: hidden;
   
 }
 
+.logo-video{
+  position: absolute;
+  top:300vh;
+  left:0;
+  width:49.6vw !important;
+  height:100vh !important;
+  z-index: 0;
+  padding:0;
+  margin:0;
+  background-color: black;
+}
+#video{
+  width: 100%;
+  height:100%;
+}
+
+.about{
+ 
+  
+}
+.box{
+  background-color:white;
+}
+
+.top{
+  z-index:0;
+}
+
 #about-info{
-      background: url("../vid/XOVN0337.gif");
+    background: url("vid/BoatsFinal.mp4");
         background-repeat: no-repeat;
+        background-color:black;
   background-size:cover;
   height:100vh;
   width:100%;
   display: grid;
-  grid-template-rows: 20% 50% 30%;
+  grid-template-rows: 30% 30% 40%;
     place-items: center end;
 	
 }
 
 #about-content {
     background-color: #4267B2;
-
+  /**border-style: solid;
+  border-left-width: 0.4vw;
+  border-left-color: black;**/
   height:100vh;
   width:100%;
 
   display: grid;
-  grid-template-rows: 20% 50% 30%;
+  grid-template-rows: 30% 30% 40%;
     place-items: center start;
 }
 
@@ -58,22 +266,53 @@ body{
   
 }
 
+.exit-video{
+  cursor: pointer;
+  float:right;
+  padding-top: 1vh;
+  padding-right: 2vw;
+}
+
+.exit{
+  float:right;
+  padding-top: 3vh;
+  padding-right: 2vw;
+  cursor: pointer;
+}
+
+.website-content{
+  width:100%;
+  height:100%;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  place-items: start center;
+}
 
 .title{
   
-  
+  z-index:1;
 }
 
 .website{
   color:whitesmoke;
-  font-size: 125px;
+
+  font-size: 7.8rem;
   font-family: futura-pt-bold,Geneva,sans-serif; 
   
 
 }
 
 
+.video-button{
+  background-color:rgb(87, 231, 97);
+}
+
+.logo-button{
+  background-color: rgb(169, 183, 247);
+}
+
 .box{
+  overflow: hidden;
   display: grid;
   grid-template-columns: 50% 50%;	
 }
@@ -126,41 +365,103 @@ body{
 }
 
 #video-content{
-      background: url("../vid/Bridge.gif");
+    background-color:black;
       background-repeat: no-repeat;
   background-size:cover;
   height:100vh;
   width:100%;
   display: grid;
-  grid-template-rows: 20% 50% 30%;
+  grid-template-rows: 30% 30% 40%;
     place-items: center start;
+    overflow: hidden;
 	
 }
 
 #video-info {
-    background-color: #8BDC90;
+    background-color: #158D69;
 
   height:100vh;
   width:100%;
   background-repeat: no-repeat;
   background-size:cover;
   display: grid;
-  grid-template-rows: 20% 50% 30%;
+  grid-template-rows: 30% 30% 40%;
     place-items: center end;
 }
+
+.slide3{
+  
+  width:100vw;
+  height:100vh;
+  display: none;
+  top:200vh;
+  z-index: 2;
+  background-color:whitesmoke;
+}
+
+.slide4{
+  
+  width:100vw;
+  height:100vh;
+  display: none;
+  top:300vh;
+  z-index: 2;
+  background-color:whitesmoke;
+}
+
+.video-container{
+  width:100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 10% auto 30%;
+}
+.cambodia{
+  width:100%;
+  height:100%;
+  
+}
+
+.cambodia-video{
+  padding-left: 4vw;
+  width:100%;
+  height:100%;
+}
+
+.service{
+  
+  width:100%;
+  height:100%;
+}
+
+.service-video{
+  margin-left: -4vw;
+  width:100%;
+  height:100%;
+}
+
+
+
+.view-video{
+
+  display: grid;
+  grid-template-columns: 40% auto 40%;
+  width: 100%;
+  height: 100%;
+}
+
 
 .logos{
 
 }
 
 #logo-info{
-      background: url("../vid/road_2.gif");
+      background-color:black;
         background-repeat: no-repeat;
   background-size:cover;
   height:100vh;
   width:100%;
   display: grid;
-  grid-template-rows: 20% 50% 30%;
+  grid-template-rows: 30% 30% 40%;
     place-items: center end;
 	
 }
@@ -172,7 +473,7 @@ body{
   width:100%;
 
   display: grid;
-  grid-template-rows: 20% 50% 30%;
+  grid-template-rows: 30% 30% 40%;
     place-items: center start;
 }
 
@@ -330,4 +631,150 @@ opacity:0;
     17% { opacity: 1 }
     25% { opacity: 0 }
     100% { opacity: 0 }
+}
+
+
+.end-container{
+  width:100%;
+  height:100vh;
+
+  display:grid;
+  grid-template-columns: 5% auto;
+  place-items: start start;
+}
+
+.first-line{
+  padding-top:3vh;
+  font-size: 5rem;
+}
+
+.ew{
+  font-size: 3rem;
+}
+.usc{
+  padding-top: 20vh;
+}
+
+
+.website-holder{
+  padding-left: 1vw;  
+  
+}
+
+.website-holder h3 {
+  line-height: 1.7em;
+  color: darkgray;
+
+}
+
+.event > h3 { 
+    position: absolute;
+    top: 390vh;
+    left: 19.5vw;
+    font-size: 15rem;
+    color: white;
+    opacity: 0;
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 10s linear infinite 0s;
+    -moz-animation: imageAnimation 10s linear infinite 0s;
+    -o-animation: imageAnimation 10s linear infinite 0s;
+    -ms-animation: imageAnimation 10s linear infinite 0s;
+    animation: imageAnimation 10s linear infinite 0s; 
+}
+.event > h3:nth-child(2)  {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    -ms-animation-delay: 2s;
+    animation-delay: 2s; 
+}
+.event > h3:nth-child(3) {
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    -ms-animation-delay: 4s;
+    animation-delay: 4s; 
+}
+.event > h3:nth-child(4) {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s; 
+}
+.event > h3:nth-child(5) {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    -o-animation-delay: 8s;
+    -ms-animation-delay: 8s;
+    animation-delay: 8s; 
+}
+
+@-webkit-keyframes event { 
+    0% { opacity: 0;
+    -webkit-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -webkit-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@-moz-keyframes event { 
+    0% { opacity: 0;
+    -moz-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -moz-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@-o-keyframes event { 
+    0% { opacity: 0;
+    -o-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -o-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@-ms-keyframes event { 
+    0% { opacity: 0;
+    -ms-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -ms-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@keyframes event { 
+    0% { opacity: 0;
+    animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@media screen and (max-width: 960px) {
+  .banner-content {
+    display: none;
+    }
+  .material {
+    display:none;
+  }
+  .video-material {
+    display:none;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .website{
+    font-size: 4rem;
+  }
 }
