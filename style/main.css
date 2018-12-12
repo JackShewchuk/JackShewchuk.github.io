@@ -8,16 +8,6 @@ overflow-x: hidden;
   -moz-text-decoration-color: none;
 }
 
-#fullpage{
- scroll-snap-type: y mandatory;
-
-
-}
-
-
-.section {
-    scroll-snap-align: start;
-}
 
 h3{
   overflow:hidden;
@@ -29,7 +19,7 @@ h3{
 }
 
 .cover{
-  background: url("../img/RealBackground.png");
+  background: url("../img/RealBackground.webp");
   background-repeat: no-repeat;
   background-size:cover;
     background-attachment: fixed;
@@ -72,13 +62,16 @@ h3{
   width:50px;
 }
 .banner{
-  font-size:1.9rem;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size:2.1rem;
   padding-left:2vw;
   color: rgb(49, 49, 49);
 }
 
 .banner-content{
-  font-size: 1.1rem;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+  font-size: 1.3rem;
   padding-left:2vw;
   color: rgb(202, 201, 201);
 }
@@ -107,7 +100,7 @@ h3{
   width:100%;
   display: grid;
   grid-template-rows: 20% auto 40%;
-    place-items: center center;
+    place-items: start center;
 }
 
 .video-video-content{
@@ -185,7 +178,8 @@ h3{
 }
 
 .h2{
-  font-family: futura-pt-bold,Geneva,sans-serif;  
+  font-family: 	"Palatino Linotype", "Book Antiqua", Palatino, serif;
+  /**futura-pt-bold,Geneva,sans-serif;  **/
 }
 
 .logo-banner{
@@ -236,15 +230,15 @@ overflow: hidden;
 }
 
 #about-info{
-    background: url("vid/BoatsFinal.mp4");
+  
         background-repeat: no-repeat;
         background-color:black;
   background-size:cover;
   height:100vh;
   width:100%;
   display: grid;
-  grid-template-rows: 30% 30% 40%;
-    place-items: center end;
+  grid-template-rows: 30% 25% 45%;
+    place-items: start end;
 	
 }
 
@@ -257,8 +251,8 @@ overflow: hidden;
   width:100%;
 
   display: grid;
-  grid-template-rows: 30% 30% 40%;
-    place-items: center start;
+  grid-template-rows: 30% 25% 45%;
+    place-items: start start;
 }
 
 #about-content:hover + .title {
@@ -294,10 +288,11 @@ overflow: hidden;
 }
 
 .website{
+  padding-top:2vh;
   color:whitesmoke;
 
   font-size: 7.8rem;
-  font-family: futura-pt-bold,Geneva,sans-serif; 
+  font-family: 	futura-pt-bold,Geneva,sans-serif;
   
 
 }
@@ -372,7 +367,7 @@ overflow: hidden;
   width:100%;
   display: grid;
   grid-template-rows: 30% 30% 40%;
-    place-items: center start;
+    place-items: start start;
     overflow: hidden;
 	
 }
@@ -386,7 +381,7 @@ overflow: hidden;
   background-size:cover;
   display: grid;
   grid-template-rows: 30% 30% 40%;
-    place-items: center end;
+    place-items: start end;
 }
 
 .slide3{
@@ -462,7 +457,7 @@ overflow: hidden;
   width:100%;
   display: grid;
   grid-template-rows: 30% 30% 40%;
-    place-items: center end;
+    place-items: start end;
 	
 }
 
@@ -474,14 +469,74 @@ overflow: hidden;
 
   display: grid;
   grid-template-rows: 30% 30% 40%;
+    place-items: start start;
+}
+.pic{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+
+}
+.one{
+  background-image: url("../img/tree.webp");
+}
+
+.two{
+  background-image: url("../img/concrete.webp");
+}
+
+.three{
+  background-image: url("../img/tree2.jpg");
+}
+
+.four{
+  background-image: url("../img/water.webp");
+}
+
+.five{
+  background-image: url("../img/grass.webp");
+}
+
+.six{
+  background-image: url("../img/IMG_0268.webp");
+}
+
+.exit-logo{
+  position: absolute;
+  top:305vh;
+  left:90vw;
+  z-index: 100;
+  cursor: pointer;
+  color:whitesmoke;
+  display:none;
+}
+
+.picture-container{
+  width:100vw;
+  height:100vh;
+  grid-template-rows: 50% 50% ;
+  grid-template-columns: 33% 33% 33%;
+  display:grid;
+
     place-items: center start;
 }
 
 .pictures{
-  margin-right:15px;
+  
    color:whitesmoke;
   font-size: 125px;
   font-family: futura-pt-bold,Geneva,sans-serif; 
+}
+
+.header{
+  position: absolute;
+  top: 50vh;
+  font-size:2.5rem;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color:whitesmoke;
+  width: 100%;
+  text-align: center;
+
 }
 
 
@@ -490,7 +545,9 @@ overflow: hidden;
   
   color:whitesmoke;
   font-size: 125px;
-  font-family: futura-pt-bold,Geneva,sans-serif; 
+  font-family: 	"Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+  /**futura-pt-bold,Geneva,sans-serif; **/
  
   background-color:black;
 
@@ -638,13 +695,13 @@ opacity:0;
   width:100%;
   height:100vh;
 
-  display:grid;
-  grid-template-columns: 5% auto;
-  place-items: start start;
+  text-align: center;
 }
 
 .first-line{
-  padding-top:3vh;
+  color:whitesmoke;
+  padding-top:30vh;
+  font-family: futura-pt-bold,Geneva,sans-serif;
   font-size: 5rem;
 }
 
@@ -760,6 +817,15 @@ opacity:0;
     25% { opacity: 0 }
     100% { opacity: 0 }
 }
+.material{
+  font-size:1rem;
+}
+
+@media screen and (max-width: 1300px){
+  .video-material {
+    display:none;
+  }
+}
 
 @media screen and (max-width: 960px) {
   .banner-content {
@@ -768,9 +834,14 @@ opacity:0;
   .material {
     display:none;
   }
+  .banner{
+    display:none;
+  }
   .video-material {
     display:none;
   }
+
+  
 }
 
 @media screen and (max-width: 520px) {
