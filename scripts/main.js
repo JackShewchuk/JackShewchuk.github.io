@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $(".button-holder").click(function(){
 		$(".slide2").removeClass("none");
 		$(".slide2").addClass("display");
