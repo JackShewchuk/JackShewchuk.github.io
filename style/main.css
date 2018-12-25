@@ -41,8 +41,8 @@ h3{
   position: absolute;
   top:100vh;
   left:0;
-  width:49.6vw !important;
-  height:100vh !important;
+  width:49.6vw;
+  height:100vh ;
   z-index: 0;
   padding:0;
   margin:0;
@@ -141,6 +141,10 @@ h3{
 .video-button-holder{
   padding-left: 2vw;
 }
+
+.video-banner{
+  color:rgb(228, 228, 228);
+}
 .view{
   width:100%;
   height:100%;
@@ -191,8 +195,8 @@ h3{
   position: absolute;
   top:200vh;
   left:48.9vw;
-  width:49.7vw !important;
-  height:100vh !important;
+  width:49.7vw;
+  height:100vh;
   z-index: 0;
   padding:0;
   margin:0;
@@ -206,18 +210,19 @@ overflow: hidden;
   position: absolute;
   top:300vh;
   left:0;
-  width:49.6vw !important;
-  height:100vh !important;
+  width:49.6vw ;
+  height:100vh ;
   z-index: 0;
   padding:0;
   margin:0;
   background-color: black;
 }
 .video{
-  background-color:black !important;
-  width: 100% !important;
-  height:100% !important;
+  background-color:black;
+  width: 100%;
+  height:100%;
 }
+
 
 .box{
   background-color:white;
@@ -241,7 +246,7 @@ overflow: hidden;
 }
 
 #about-content {
-    background-color: #4b91c8;
+    background-color: #4389be;
   /**border-style: solid;
   border-left-width: 0.4vw;
   border-left-color: black;**/
@@ -249,7 +254,7 @@ overflow: hidden;
   width:100%;
 
   display: grid;
-  grid-template-rows: 30% 25% 45%;
+  grid-template-rows: 30% 30% 40%;
     place-items: start start;
 }
 
@@ -297,13 +302,15 @@ overflow: hidden;
 
 
 .video-button{
-  background-color:#6a686d;
-  color:#d8d2e6;
+  background-color: #f0caac;
+  color:darkslategrey;
   letter-spacing: 0.05rem;
 }
 
 .logo-button{
-  background-color: #7aacbd;
+  background-color: #f0caac;
+  color:darkslategray;
+  letter-spacing: 0.05em;
 }
 
 .box{
@@ -368,7 +375,7 @@ overflow: hidden;
 }
 
 #video-info {
-    background-color: rgb(175, 189, 207);
+    background-color: #171b21;
 
   height:100vh;
   width:100%;
@@ -439,10 +446,6 @@ overflow: hidden;
   height: 100%;
 }
 
-.video-color{
-  color:rgb(69, 77, 104);
-}
-
 #logo-info{
       background-color:black;
         background-repeat: no-repeat;
@@ -455,8 +458,13 @@ overflow: hidden;
 	
 }
 
+.logo-baner-color{
+  color:whitesmoke;
+
+}
+
 #logo-content {
-    background-color: #319547;
+    background-color: #142e25;
 
   height:100vh;
   width:100%;
@@ -688,17 +696,34 @@ opacity:0;
 .end-container{
   width:100%;
   height:100vh;
-
-  text-align: center;
+  display:grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 20% 80%;
 }
 
 .first-line{
   background-color: black;
   color:whitesmoke;
-  padding-top:30vh;
+ 
   font-family: futura-pt-bold,Geneva,sans-serif;
   font-size: 7rem;
 }
+
+.usc-title{
+  background-color: black;
+  color:whitesmoke;
+  
+   font-family: futura-pt-bold,Geneva,sans-serif;
+   position: relative;
+  top: 4vh;
+  font-size: 7rem;
+}
+
+.block{
+  display: grid;
+  grid-template-rows: 20% auto;
+}
+
 
 .ew{
   font-size: 5rem;
@@ -817,23 +842,33 @@ opacity:0;
   font-size:1rem;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (min-width: 960px){
+
+  .mobile-website{
+    display:none;
+  }
+
+  .mobile-video{
+    display:none;
+  }
+
+  .mobile-logo{
+    display:none;
+  }
+
+}
+
+@media screen and (max-width: 960px) {
   .video-material {
     display:none;
   }
-  .website{
-    font-size: 7.8rem;
-  }
+
   .banner{
     font-size:2.1rem;
   }
   .banner-content{
     font-size:1.3rem;
   }
-}
-
-@media screen and (max-width: 960px) {
-  
   .material {
     display:none;
   }
@@ -842,12 +877,81 @@ opacity:0;
     display:none;
   }
 
+  .banner-content{
+    display:none;
+  }
+  .banner{
+    display:none;
+  }
+  .box{
+    grid-template-columns: 100%;
+  }
+
+  .website-video{
+    width:100%;
+    height:100%;
+  }
+  #video-info{
+    display:none;
+  }
+  #video-content{
+    display:none;
+  }
+  #logo-content{
+    display: none;
+  }
+
+  .video-video{
+    width:100%;
+    height:100%;
+    left:0;
+  }
+
+  .logo-video{
+    width:100%;
+    height:100%;
+  }
+  .website{
+    display: none;
+  }
+
+  .mobile-website{
+    display:block;
+  }
+
+  .mobile-video{
+    display: block;
+  }
+
   
+  .mobile-logo{
+    display: block;
+  }
+
+  .first-line{
+    font-size: 4rem;
+  }
+  .rw-words{
+    font-size:5rem !important;
+  }
+  .usc-title{
+    font-size:4rem;
+    top:-5vh;
+  }
+  .ew{
+    display:none;
+  }
+  .cover{
+    background-image:url(../img/mobileBackground.png);
+  }
 }
 
 @media screen and (max-width: 520px) {
   .website{
     font-size: 4rem;
+  }
+  .mobile-website-title{
+    font-size:6rem;
   }
   .banner-content {
     display: none;
@@ -855,4 +959,104 @@ opacity:0;
     .banner{
       display:none;
     }
+    
 }
+
+
+
+
+
+
+.rw-words{
+  background-color: black;
+  color:#f0caac;
+
+  font-family: futura-pt-bold,Geneva,sans-serif;
+  font-size: 10rem;
+}
+
+.rw-words span{
+  margin:0;
+  position: absolute;
+  width:40vh;
+	opacity: 0;
+	overflow: hidden;
+	width: 100%;
+
+}
+
+.rw-words span{
+	animation: rotateWordsFirst 18s linear infinite 0s;
+}
+.rw-words span:nth-child(2) { 
+	animation-delay: 3s; 
+	color: #f0c9acca;
+}
+.rw-words span:nth-child(3) { 
+	animation-delay: 6s; 
+	color: #f0c9ace7;	
+}
+.rw-words span:nth-child(4) { 
+	animation-delay: 9s; 
+	color: #f0c9ace3;
+}
+.rw-words span:nth-child(5) { 
+	animation-delay: 12s; 
+	color: #f0c9acec;
+}
+.rw-words span:nth-child(6) {  
+	animation-delay: 15s; 
+	color: #f0caac;
+}
+
+@keyframes rotateWordsFirst {
+  0% { opacity: 1; animation-timing-function: ease-in; height: 0px; }
+  8% { opacity: 1; height: 200px; }
+  19% { opacity: 1; height: 200px; }
+  25% { opacity: 0; height: 200px; }
+  100% { opacity: 0; }
+}
+
+
+.mobile-website{
+  position: absolute;
+  top:125vh;
+  text-align: center;
+  width:100%;
+  height:100%;
+}
+.mobile-website-title{
+  padding-top:2vh;
+  color:whitesmoke;
+  font-size: 6rem;
+  font-family: 	futura-pt-bold,Geneva,sans-serif;
+}
+
+.mobile-video{
+  position: absolute;
+  top:235vh;
+  text-align: center;
+  width:100%;
+  height:100%;
+}
+.mobile-video-title{
+  padding-top:2vh;
+  color:whitesmoke;
+  font-size: 6rem;
+  font-family: 	futura-pt-bold,Geneva,sans-serif;
+}
+
+.mobile-logo{
+  position: absolute;
+  top:325vh;
+  text-align: center;
+  width:100%;
+  height:100%;
+}
+.mobile-logo-title{
+  padding-top:2vh;
+  color:whitesmoke;
+  font-size: 6rem;
+  font-family: 	futura-pt-bold,Geneva,sans-serif;
+}
+
