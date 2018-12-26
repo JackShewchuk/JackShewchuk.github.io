@@ -989,16 +989,20 @@ opacity:0;
   .mobile-logo{
     display: block;
   }
+  
 
   .first-line{
     font-size: 4rem;
+    position: relative;
+    top:-10vh;
   }
   .rw-words{
     font-size:5rem !important;
   }
   .usc-title{
     font-size:4rem;
-    top:-5vh;
+    position: relative;
+    top:10  vh;
   }
   .ew{
     display:none;
@@ -1011,7 +1015,7 @@ opacity:0;
     font-size: 4rem;
   }
   .mobile-website-title{
-    font-size:6rem;
+    font-size:5.5rem;
   }
   .banner-content {
     display: none;
@@ -1089,7 +1093,7 @@ opacity:0;
 .mobile-website-title{
   padding-top:2vh;
   color:whitesmoke;
-  font-size: 6rem;
+  font-size: 5.1rem;
   font-family: 	futura-pt-bold,Geneva,sans-serif;
 }
 
