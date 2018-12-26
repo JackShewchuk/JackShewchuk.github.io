@@ -994,7 +994,7 @@ opacity:0;
   .first-line{
     font-size: 4rem;
     position: relative;
-    top:-10vh;
+    top:-2vh;
   }
   .rw-words{
     font-size:5rem !important;
@@ -1002,7 +1002,7 @@ opacity:0;
   .usc-title{
     font-size:4rem;
     position: relative;
-    top:10  vh;
+    top:5vh;
   }
   .ew{
     display:none;
@@ -1099,7 +1099,7 @@ opacity:0;
 
 .mobile-video{
   position: absolute;
-  top:235vh;
+  top:215vh;
   text-align: center;
   width:100%;
   height:100%;
