@@ -29,6 +29,7 @@ $(document).ready(function(){
 		$(".slide4").addClass("none");
    		$(".slide4").fadeOut("fast");
 	});
+	
 
 });
 

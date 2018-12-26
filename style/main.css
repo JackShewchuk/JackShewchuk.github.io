@@ -42,7 +42,7 @@ h3{
   top:100vh;
   left:0;
   width:49.6vw;
-  height:100vh ;
+  height:100vh;
   z-index: 0;
   padding:0;
   margin:0;
@@ -252,7 +252,7 @@ overflow: hidden;
   border-left-color: black;**/
   height:100vh;
   width:100%;
-
+  z-index:0;
   display: grid;
   grid-template-rows: 30% 30% 40%;
     place-items: start start;
@@ -728,6 +728,8 @@ opacity:0;
 .ew{
   font-size: 5rem;
   color:whitesmoke;
+  position: relative;
+  top:10rem;
 }
 .usc{
   padding-top: 20vh;
@@ -842,7 +844,62 @@ opacity:0;
   font-size:1rem;
 }
 
-@media screen and (min-width: 960px){
+.mobile-home{
+  background-color:rgb(14, 11, 11);
+  font-family: futura-pt-bold,Geneva,sans-serif;
+  text-align: center;
+  width:100vw;
+  height:100vh;
+  margin:0;
+  color:white;
+  position: relative;
+  padding-top:30vh;
+  z-index:0;
+  
+}
+
+.I_make{
+  color:whitesmoke;
+  font-size: 7rem;
+}
+
+.stories{
+  font-size: 10rem;
+  animation: colorchange 12s ease-in-out infinite 0s; 
+  -webkit-animation: colorchange 12s ease-in-out infinite 0s;
+}
+
+@media screen and (max-width:700px){
+  .I_make{
+    font-size:5rem;
+  }
+  .stories{
+    font-size: 6rem;
+  }
+
+}
+
+@media screen and (max-width:1400px){
+  #crossfade{
+    display:none;
+  }
+  .mobile-home{
+    display: relative;
+  }
+
+}
+
+@media screen and (min-width:1400px){
+  #crossfade{
+    display:relative;
+  }
+  .mobile-home{
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 1100px){
 
   .mobile-website{
     display:none;
@@ -858,13 +915,13 @@ opacity:0;
 
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1100px) {
   .video-material {
     display:none;
   }
 
   .end-container{
-    grid-template-columns: 2% auto;
+    grid-template-columns: 20% auto;
   }
 
   .banner{
@@ -890,7 +947,7 @@ opacity:0;
   .box{
     grid-template-columns: 100%;
   }
-  .
+  
 
   .website-video{
     width:100%;
@@ -946,9 +1003,7 @@ opacity:0;
   .ew{
     display:none;
   }
-  .cover{
-    background-image:url(../img/mobileBackground.png);
-  }
+
 }
 
 @media screen and (max-width: 520px) {
@@ -978,6 +1033,7 @@ opacity:0;
 
   font-family: futura-pt-bold,Geneva,sans-serif;
   font-size: 10rem;
+  height:15vh;
 }
 
 .rw-words span{
@@ -1065,3 +1121,21 @@ opacity:0;
   font-family: 	futura-pt-bold,Geneva,sans-serif;
 }
 
+
+    @keyframes colorchange
+    {
+      0%   {color: whitesmoke;}
+      25%  {color: #f0caac;}
+      50%  {color: rgb(36, 36, 70);}
+      75%  {color: #4389be;}
+      100% {color: #142e25;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {color: whitesmoke;}
+      25%  {color: #f0caac;}
+      50%  {color: rgb(14, 14, 19);}
+      75%  {color: #4389be;}
+      100% {color: #142e25;}
+    }
